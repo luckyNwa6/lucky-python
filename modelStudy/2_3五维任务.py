@@ -1,5 +1,4 @@
 # 导入必要的库
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
@@ -40,7 +39,6 @@ class TorchModel(nn.Module):
 
 def build_sample():
     x = np.random.randn(5)  # 随机生成一个 5 维向量
-
     # 找到最大值的索引，即为正确类别 (0, 1, 2, 3, or 4)
     y_class = np.argmax(x)
 
@@ -134,15 +132,15 @@ def main():
     print("\n训练日志:", log)
 
     # 绘图部分
-    plt.figure(figsize=(10, 5))
-    plt.plot(range(len(log)), [l[0] for l in log], label='Accuracy')
-    plt.plot(range(len(log)), [l[1] for l in log], label='Loss')
-    plt.legend()
-    plt.title('5-Class Classification Training Metrics')
-    plt.xlabel('Epoch')  # X轴是训练轮次
-    plt.ylabel('Value')
-    plt.grid(True)
-    plt.show()
+    # plt.figure(figsize=(10, 5))
+    # plt.plot(range(len(log)), [l[0] for l in log], label='Accuracy')
+    # plt.plot(range(len(log)), [l[1] for l in log], label='Loss')
+    # plt.legend()
+    # plt.title('5-Class Classification Training Metrics')
+    # plt.xlabel('Epoch')  # X轴是训练轮次
+    # plt.ylabel('Value')
+    # plt.grid(True)
+    # plt.show()
 
 
 if __name__ == '__main__':
