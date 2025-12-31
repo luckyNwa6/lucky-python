@@ -13,6 +13,17 @@ import torch.nn as nn
 实现一个网络完成一个简单nlp任务
 判断文本中是否有某些特定字符出现
 
+输入字符ID
+   ↓
+Embedding（查表）
+   ↓
+平均池化（整句压缩成一个向量）
+   ↓
+Linear（线性分类）
+   ↓
+Sigmoid（变成概率）
+
+
 """
 
 
